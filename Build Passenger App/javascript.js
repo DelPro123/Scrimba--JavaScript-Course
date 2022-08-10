@@ -78,7 +78,8 @@ function reset() {
 }
 // 1. Create a function, save(), which logs out the count when it's called
 function save(){
-   saved.textContent+=count+ "\n";
+    saved.textContent=count;
+   //saved.textContent+=count+ "\n";
      
 }
 
