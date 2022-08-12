@@ -1,38 +1,47 @@
-let firstCard = 10
-let secondCard = 4
-let cards=[ firstCard,secondCard] //ordered list arrays complex data type
-let sum = firstCard + secondCard
-let hasBlackJack = false
-let isAlive = true
-let message = ""
-let messageEl = document.getElementById("message-el")
-let sumEl= document.getElementById("sum-el");
-let cardEl= document.getElementById("card-el");
-//let sumEl = document.querySelector("#sum-el") for advance javascript and can aplly the css
+// Arrays - ordered lists of items
 
-function renderGame() {
-    if (sum <= 20) {
-        message = "Do you want to draw a new card?"
-    } else if (sum === 21) {
-        message = "Wohoo! You've got Blackjack!"
-        hasBlackJack = true
-    } else {
-        message = "You're out of the game!"
-        isAlive = false
-    }
-    
-    messageEl.textContent = message
-    sumEl.textContent = "Sum: " + sum;
-    cardEl.textContent = "Cards: " +cards[0]+" "+cards[1];
-}
-function newCard(){
-    let card=7;
-    sum+=card;
-    renderGame();
+// 0 indexed
+let featuredPosts = [
+    "Check out my Netflix clone",        // 0 
+    "Here's the code for my project",    // 1
+    "I've just relaunched my portfolio"  // 2
+]
 
-}
+console.log( featuredPosts.length )
 
-function startGame(){
-    renderGame();
-}
-console.log(messageEl)
+
+//intro of array
+//index of array
+//multiple data types in array
+
+// Array - ordered list of items - coposite / complex data type
+
+// Create an array that describes yourself. Use the three primitive data types you've learned
+// It should contain your name (string), your age (number), and whether you like pizza (boolean)
+let del = ["Johndel L Siriban", 23, true]
+
+//adding and removing item from arrays
+
+let cards =[7,8]
+
+cards.push(2);
+
+console.log(cards);
+
+//Challenge
+
+let messages = [
+    "Hey, how's it going?",        
+    "I'm great, thank you! How about you?",
+    "All good. Been working on my portfolio lately."
+]
+
+let newMessage = "Same here!";
+
+messages.push(newMessage);
+
+console.log(messages);
+
+// How can you remove the last item in an array? Try to google it!
+messages.pop();
+console.log(messages);
