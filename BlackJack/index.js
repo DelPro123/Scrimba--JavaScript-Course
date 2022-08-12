@@ -8,7 +8,7 @@ let message = ""
 let messageEl = document.getElementById("message-el")
 let sumEl= document.getElementById("sum-el");
 let cardEl= document.getElementById("card-el");
-//let sumEl = document.querySelector("#sum-el") for advance javascript and can aplly the css
+//let sumEl = document.querySelector("#sum-el") for advance javascript and can apply the css
 
 function renderGame() {
     if (sum <= 20) {
@@ -20,7 +20,6 @@ function renderGame() {
         message = "You're out of the game!"
         isAlive = false
     }
-    
     messageEl.textContent = message
     sumEl.textContent = "Sum: " + sum;
     cardEl.textContent = "Cards: " +cards[0]+" "+cards[1];
@@ -28,6 +27,8 @@ function renderGame() {
 function newCard(){
     let card=7;
     sum+=card;
+    cards.push(sum);
+    console.log(cards)
     renderGame();
 
 }
@@ -35,4 +36,3 @@ function newCard(){
 function startGame(){
     renderGame();
 }
-console.log(messageEl)

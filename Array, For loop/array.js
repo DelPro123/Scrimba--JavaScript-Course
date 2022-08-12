@@ -45,3 +45,16 @@ console.log(messages);
 // How can you remove the last item in an array? Try to google it!
 messages.pop();
 console.log(messages);
+
+//combining the array to the for loop
+
+for( let i=0; i<=4;i+=1){
+    console.log(messages[i]);
+
+}
+
+//technic no.2 required
+
+for(let loop=0; loop<=messages.length; loop+=1){
+    console.log(messages[loop])
+}
